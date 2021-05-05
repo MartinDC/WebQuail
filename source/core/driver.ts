@@ -117,7 +117,7 @@ export class WQDriver {
         }
 
         var interpolationDelta = this.accumulatedTime / timestep;
-        this.renderer(interpolationDelta);
+        this.render(interpolationDelta);
         this.requestAnimationFrame(timestep);
 
         if (config.display_framerate_logging) {

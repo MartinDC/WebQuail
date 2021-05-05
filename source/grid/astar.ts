@@ -1,14 +1,5 @@
 // Adapted by MDC 2021 from:
-
-// javascript-astar 0.4.1
 // http://github.com/bgrins/javascript-astar
-// Freely distributable under the MIT License.
-// Implements the astar search algorithm in javascript using a Binary Heap.
-// Includes Binary Heap (with modifications) from Marijn Haverbeke.
-// http://eloquentjavascript.net/appendix2.html
-
-// TODO : Better types for all functions and parts
-
 
 // HOW TO USE:
 // var graph = new Graph([
@@ -62,10 +53,8 @@ export class WQAStarOptions {
  * @param {GridNode} start
  * @param {GridNode} end
  * @param {Object} [options]
- * @param {bool} [options.closest] Specifies whether to return the
-             path to the closest node if the target is unreachable.
-* @param {Function} [options.heuristic] Heuristic function (see
-*          astar.heuristics).
+ * @param {bool} [options.closest] Specifies whether to return the path to the closest node if the target is unreachable.
+* @param {Function} [options.heuristic] Heuristic function (see astar.heuristics).
 */
 export class WQAStarPathfinder {
     private graphReference: WQAStarGraph = undefined;
@@ -111,8 +100,7 @@ export class WQAStarPathfinder {
             for (var i = 0, il = neighbors.length; i < il; ++i) {
                 var neighbor = neighbors[i];
 
-                if (neighbor.closed || neighbor.isWall()) {
-                    // Not a valid node to process, skip to next neighbor.
+                if (neighbor.closed || neighbor.isWall) {   // Not a valid node to process, skip to next neighbor.
                     continue;
                 }
 
@@ -262,7 +250,7 @@ export class WQAStarGraph {
         var x = node.x;
         var y = node.y;
         var ret = [];
-
+        
         // West
         if (grid[x - 1] && grid[x - 1][y]) {
             ret.push(grid[x - 1][y]);
@@ -307,21 +295,6 @@ export class WQAStarGraph {
 
         return ret;
     }
-
-    toString() {
-        var graphString = [],
-            nodes = this.grid, // when using grid
-            rowDebug, row, y, l;
-        for (var x = 0, len = nodes.length; x < len; x++) {
-            rowDebug = [];
-            row = nodes[x];
-            for (y = 0, l = row.length; y < l; y++) {
-                rowDebug.push(row[y].weight);
-            }
-            graphString.push(rowDebug.join(" "));
-        }
-        return graphString.join("\n");
-    }
 }
 
 export class WQAStarGridNode {
@@ -335,11 +308,5 @@ export class WQAStarGridNode {
         return this.weight;
     }
 
-    isWall() {
-        return this.weight === 0;
-    }
-
-    toString() {
-        return "[" + this.x + " " + this.y + "]";
-    }
+    get isWall() { return this.weight === 0; }
 }
