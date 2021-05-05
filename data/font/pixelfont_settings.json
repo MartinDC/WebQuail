@@ -1,0 +1,65 @@
+{
+    "name" : "PixelFont",
+    "path" : "./data/font/pixelfont_typea.png",
+    "kerning" : false,
+    "monospace": true,
+    "dimensionW": 256,
+    "dimensionH": 128,
+
+    "fontDrawX" : 0,
+    "fontDrawY" : 2,
+
+    "fontPaddingX" : 0,
+    "fontPaddingY" : 1,
+
+    "charWidth" : 6,
+    "charHeight" : 8,
+
+    "lineSpacing" : 2,
+    "charSpacing" : 1,
+    "wordSpacing" : 2,
+
+    "legalCharString" :
+    {
+        "textRow" : 26,
+        "letterU" : "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "letterL" : "abcdefghijklmnopqrstuvwxyz",
+        "number" : "0123456789",
+        "miscs"  : "/\\\"!?.,;:()][|<>#_&+-=*%"
+    },
+
+    "glyphData" :
+    {
+        "letterU" :
+        {
+            "xOffset": 0,
+            "yOffset": -1,
+            "width": -1,
+            "height": -1
+        },
+
+        "letterL" :
+        {
+            "xOffset": 0,
+            "yOffset": 1,
+            "width": 4,
+            "height": -1
+        },
+
+        "number" :
+        {
+            "xOffset": 0,
+            "yOffset": 0,
+            "width": -1,
+            "height": -1
+        },
+
+        "misc" :
+        {
+            "xOffset": 0,
+            "yOffset": 0,
+            "width": -1,
+            "height": -1
+        }
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "entryAscii": {
+        "ending": "\n\n",
+        "color": "color: green;",
+        "art": "%c\r\n      ______ ______\r\n    _\/      Y      \\\\_\r\n   \/\/ ~~ ~~ | ~~ ~  \\\\\\\\\r\n  \/\/ ~ ~ ~~ | ~~~ ~~ \\\\\\\\      Welcome to Battleships\r\n \/\/________.|.________\\\\\\\\        A thing by MDC(www.mdcthings.se)\r\n\\`----------\\`-'----------'%s"
+    }
+}
