@@ -1,2 +1,3 @@
 # Webquail
-A simple media framework to avoid some of the boilerplate usually required while playing with the web.
+
+TLDR; My simple media framework. Webquail provides many additional features and simplifications of many repetitive tasks centered around media applications.
